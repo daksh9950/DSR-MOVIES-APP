@@ -1,0 +1,19 @@
+import React from 'react'
+import { Link } from 'react-router-dom'
+
+function Cards({data,title}) {
+    return (
+        <div>
+            <div className='flex flex-wrap w-[full] h-full px-[3%] bg-[#1F1E24] ' >{data.map((c,i)=>(
+                <Link className='w-[30vh] mr-[5%] mb-[5%] mt-5 ' key={i} >
+                    <img className='h-[40vh] rounded-md  object-cover shadow-[8px_17px_38px_2px_rgba(0,0,.5)]' src={`https://image.tmdb.org/t/p/original/${data.poster_path  || c.backdrop_path}`} alt="" />
+                   <h1 className='text-2xl text-zinc-400 mt-3 font-semibold' >
+                     {c.name || c.title || c.original_name || c.original_title}
+                   </h1>
+                </Link>
+            ))}</div> 
+        </div>
+    )
+}
+
+export default Cards

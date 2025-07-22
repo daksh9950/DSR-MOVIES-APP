@@ -2,9 +2,9 @@ import React from 'react'
 
 function Dropdown({title, options,func}) {
     return (
-        <div>
+        <div className='select' >
                 <select name="format" defaultValue="0" id="format" onChange={func}>
-                    <option value="0" disabled >
+                    <option value="0"  >
                          {title}
                     </option>
                     {options.map((o,i)=>(

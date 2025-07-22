@@ -5,6 +5,7 @@ import axios from "../utlis/axios"
 import Header from './TEmplate/Header'
 import HorizontalCards from './TEmplate/HorizontalCards'
 import Dropdown from './TEmplate/Dropdown'
+import Loader from './TEmplate/Loader'
 
 function Home() {
      document.title = "The Movie App"
@@ -66,7 +67,9 @@ function Home() {
          </div>
        </>
         
-    ):<h1>loading... </h1>
+    ):(
+      <Loader/>
+    )
 }
 
 export default Home

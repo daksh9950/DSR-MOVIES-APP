@@ -1,6 +1,7 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Home from './components/Home'
+import Trending from './components/TEmplate/Trending'
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
     <div className='w-screen h-screen bg-[#1F1E24] flex ' >
       <Routes>
         <Route path='/' element={<Home/>} />
+        <Route path='/Trending' element={<Trending/>} />
       </Routes>
     </div>
   )

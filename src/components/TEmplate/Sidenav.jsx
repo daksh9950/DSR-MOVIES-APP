@@ -14,21 +14,21 @@ function Sidenav() {
                      <span className='text-2xl' >DSR MOVIES</span>
                  </h1>
                  
-                 <nav className='flex flex-col text-zinc-400 text-xl gap-3'>
-                    <h1 className='text-white font-semibold text-xl mt-10 mb-5 ' >New Feeds</h1>
-                    <Link className='hover:bg-[#6556CD] hover:text-white duration-200 rounded-md p-5 ' >   <i class="ri-fire-fill"></i>Trending</Link>
-                    <Link className='hover:bg-[#6556CD] hover:text-white duration-200 rounded-md p-5   ' >     <i class="ri-heart-fill"></i>Popular</Link>
-                    <Link className='hover:bg-[#6556CD] hover:text-white duration-200 rounded-md p-5  ' >   <i class="ri-movie-2-fill"></i> Movies  </Link>
-                    <Link className='hover:bg-[#6556CD] hover:text-white duration-200 rounded-md p-5 ' >   <i class="ri-tv-2-fill"></i>Tv Shows</Link>
-                    <Link className='hover:bg-[#6556CD] hover:text-white duration-200 rounded-md p-5 ' >     <i class="ri-user-fill"></i>Peoples</Link>
+                 <nav className='flex flex-col text-zinc-400 text-xl gap-2'>
+                    <h1 className='text-white font-semibold text-xl mt-5 mb-3 ' >New Feeds</h1>
+                    <Link to='/Trending' className='hover:bg-[#6556CD] hover:text-white duration-200 rounded-md p-3 ' >   <i class="ri-fire-fill"></i>Trending</Link>
+                    <Link className='hover:bg-[#6556CD] hover:text-white duration-200 rounded-md p-3   ' >     <i class="ri-heart-fill"></i>Popular</Link>
+                    <Link className='hover:bg-[#6556CD] hover:text-white duration-200 rounded-md p-3  ' >   <i class="ri-movie-2-fill"></i> Movies  </Link>
+                    <Link className='hover:bg-[#6556CD] hover:text-white duration-200 rounded-md p-3 ' >   <i class="ri-tv-2-fill"></i>Tv Shows</Link>
+                    <Link className='hover:bg-[#6556CD] hover:text-white duration-200 rounded-md p-3 mb-3 ' >     <i class="ri-user-fill"></i>Peoples</Link>
                  </nav>
-                 {/* <hr /> */}
-                 {/* <nav className='flex flex-col text-zinc-400 text-xl gap-3'>
-                    <h1 className='text-white font-semibold text-xl mt-10 mb-5' >New Feeds</h1>
-                    <Link className='hover:bg-[#6556CD] hover:text-white duration-200 rounded-md p-5 ' >Trending</Link>
-                    <Link className='hover:bg-[#6556CD] hover:text-white duration-200 rounded-md p-5 ' >Popular</Link>
+                 <hr className='border-1 border-white ' /> 
+                  <nav className='flex flex-col text-zinc-400 text-xl gap-2'>
+                    <h1 className='text-white font-semibold text-xl mt-5 mb-3' >Website Information</h1>
+                    <Link className='hover:bg-[#6556CD] hover:text-white duration-200 rounded-md p-3 ' >About DSR</Link>
+                    <Link className='hover:bg-[#6556CD] hover:text-white duration-200 rounded-md p-3 ' >Contact Us</Link>
                   
-                 </nav> */}
+                 </nav>
             </div>
         </>
     )
