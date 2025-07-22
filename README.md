@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 # 🎬 Dsr Movie App
@@ -24,3 +25,6 @@ cd movie-app
 npm install
 npm start
 
+=======
+# DSR-MOVIES-APP
+>>>>>>> 8d3ba0b441d549bf3583f06fa9b18dfeafe58c07
