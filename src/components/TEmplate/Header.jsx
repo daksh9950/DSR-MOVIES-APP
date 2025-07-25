@@ -16,7 +16,7 @@ function Header({data}) {
         <h1 className='text-3xl w-[70%] font-semibold text-white  ' >
             {data.name || data.title || data.original_name || data.original_title}
         </h1>
-        <p className='w-[70%] text-white ' >{data?.overview?.slice(0,200) }...<Link className='text-blue-200' >more</Link></p>
+        <p className='w-[70%] text-white ' >{data?.overview?.slice(0,200) }...<Link to={`/${data.media_type}/details/${data.id}`} className='text-blue-200' >more</Link></p>
         <p className='w-[70%] text-white '>
             <i class=" text-yellow-300  ri-megaphone-fill"></i>{data.first_air_date || "no infromation"}
             <i class=" ml-5 text-yellow-300 ri-album-fill"></i>{data?.media_type?.toUpperCase()}

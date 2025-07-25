@@ -16,11 +16,11 @@ function Sidenav() {
                  
                  <nav className='flex flex-col text-zinc-400 text-xl gap-2'>
                     <h1 className='text-white font-semibold text-xl mt-5 mb-3 ' >New Feeds</h1>
-                    <Link to='/Trending' className='hover:bg-[#6556CD] hover:text-white duration-200 rounded-md p-3 ' >   <i class="ri-fire-fill"></i>Trending</Link>
-                    <Link className='hover:bg-[#6556CD] hover:text-white duration-200 rounded-md p-3   ' >     <i class="ri-heart-fill"></i>Popular</Link>
-                    <Link className='hover:bg-[#6556CD] hover:text-white duration-200 rounded-md p-3  ' >   <i class="ri-movie-2-fill"></i> Movies  </Link>
-                    <Link className='hover:bg-[#6556CD] hover:text-white duration-200 rounded-md p-3 ' >   <i class="ri-tv-2-fill"></i>Tv Shows</Link>
-                    <Link className='hover:bg-[#6556CD] hover:text-white duration-200 rounded-md p-3 mb-3 ' >     <i class="ri-user-fill"></i>Peoples</Link>
+                    <Link to='/trending' className='hover:bg-[#6556CD] hover:text-white duration-200 rounded-md p-3 ' >   <i class="ri-fire-fill"></i>Trending</Link>
+                    <Link to="/popular" className='hover:bg-[#6556CD] hover:text-white duration-200 rounded-md p-3   ' >     <i class="ri-heart-fill"></i>Popular</Link>
+                    <Link to="/movie" className='hover:bg-[#6556CD] hover:text-white duration-200 rounded-md p-3  ' >   <i class="ri-movie-2-fill"></i> Movies  </Link>
+                    <Link to="/tv" className='hover:bg-[#6556CD] hover:text-white duration-200 rounded-md p-3 ' >   <i class="ri-tv-2-fill"></i>Tv Shows</Link>
+                    <Link to="/people" className='hover:bg-[#6556CD] hover:text-white duration-200 rounded-md p-3 mb-3 ' >     <i class="ri-user-fill"></i>Peoples</Link>
                  </nav>
                  <hr className='border-1 border-white ' /> 
                   <nav className='flex flex-col text-zinc-400 text-xl gap-2'>

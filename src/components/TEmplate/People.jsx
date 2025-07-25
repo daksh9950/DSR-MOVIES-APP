@@ -7,25 +7,27 @@ import Cards from './Cards';
 import Loader from './Loader';
 import InfiniteScroll from "react-infinite-scroll-component"
 
-function Trending() {
-    document.title = "DSR | TRENDING"
+
+function People() {
+
+    document.title = "DSR | PEOPLE"
     const navigate = useNavigate();
-    const [trending, settrending] = useState([])
-    const [category, setcategory] = useState("all")
-    const [duration, setduration] = useState("day")
+    const [person, setperson] = useState([])
+    const [category, setcategory] = useState("popular")
+    
     const [pages, setpages ] = useState(1);
     const [hasmore, sethasmore] = useState(true)
 
-
-
-    const gettrending = async ()=>{
+    const getperson= async ()=>{
             try {
-            const {data} = await axios.get(`/trending/${category}/${duration}?page=${pages}`)
+            const {data} = await axios.get(`/person/popular?pages=${pages}`)
+            console.log(data)
 
             if(data.results.length > 0){
                 
                 setpages(pages + 1)
-                settrending((prev)=>[...prev, ...data.results])
+                setperson((prev)=>[...prev, ...data.results])
+                
             }
             else{
                 sethasmore(false);
@@ -41,13 +43,13 @@ function Trending() {
     } 
     
     const refreshhandler =  async()=>{
-        if(trending.length === 0 ){
-            gettrending();
+        if(person.length === 0 ){
+            getperson();
         }
         else{
             setpages(1)
-            settrending([])
-            gettrending()
+            setperson([])
+            getperson()
         }
     }
 
@@ -57,48 +59,41 @@ function Trending() {
     useEffect(()=>{
         refreshhandler(); 
 
-    },[category,duration])
+    },[category])
 
 
-
-
-    return trending.length > 0 ? (
+     return person.length > 0 ? (
         <div className='w-screen h-screen   ' >
             <div className='w-full flex items-center justify-between px-[3%]' >
                 
                 <h1 className='text-2xl font-semibold text-zinc-400 ' >
                     <i onClick={()=>navigate(-1)}  class="mr-2 hover:text-[#6001D2] ri-arrow-left-fill"></i> 
-                    Trending
+                    Person
                 </h1> 
                
                
 
-                <div className='flex items-center  w-[90%] ' >
+                <div className='flex items-center  w-[90%] gap-[10%] ' >
                 <Topnav  />
                 
-                <Dropdown
+                {/* <Dropdown
                    title="Category"
-                   options={["movies", "tv", "all"]}
+                   options={["popular", "top_rated", "upcoming", "now_playing"]}
                    func={(e)=>setcategory(e.target.value)}
                    
-                />
-                <div className='w-[2%]' ></div>
-                <Dropdown
-                   title="Duration"
-                   options={["week", "day"]}
-                   func={(e)=>setduration(e.target.value)}
-                   
-                />
+                /> */}
+                <div className='w-[2%] ' ></div>
+                
                 </div> 
             </div>
 
-            <InfiniteScroll
-                  dataLength={trending.length}
-                  next={gettrending}
+            <InfiniteScroll 
+                  dataLength={person.length}
+                  next={getperson}
                   hasMore={hasmore}  
                   loader={<h4>Loading...</h4>} 
             >
-                <Cards data={trending} title={category}  />
+                <Cards data={person} title="People"  />
 
             </InfiniteScroll>
 
@@ -110,4 +105,4 @@ function Trending() {
     )
 }
 
-export default Trending
+export default People
