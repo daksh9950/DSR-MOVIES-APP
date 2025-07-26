@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Dropdown from './Dropdown'
 import cFL from "./Capitalize"
+import noimage from "../../assets/image.jpeg"
 
 function HorizontalCards({data}) {
     return (
@@ -13,7 +14,7 @@ function HorizontalCards({data}) {
                           
                           <img
                              className='w-full h-[55%] object-cover  '
-                             src={`https://image.tmdb.org/t/p/original/${d.poster_path || d.profile_path || d.backdrop_path}`} alt="" />
+                             src={d.poster_path || d.profile_path || d.backdrop_path ?`https://image.tmdb.org/t/p/original/${d.poster_path || d.profile_path || d.backdrop_path}`:noimage } alt="" />
 
                             <div className='text-white h-[45%] overflow-y-auto ' >
                                 <h1 className='text-lg font-semibold mt-3   ' >

@@ -8,6 +8,7 @@ import HorizontalCards from './HorizontalCards';
 import Trailer from './Trailer';
 
 
+
 function Tvdetails() {
       const {pathname} = useLocation()
     const navigate = useNavigate();

@@ -3,18 +3,19 @@ import { createReactPlayer } from 'react-player/ReactPlayer';
 import { useSelector } from 'react-redux';
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import Notfound from './notfound';
-import ReactPlayer from "react-player"
+
 
 
 function Trailer() {
     const navigate = useNavigate();
     const {pathname} = useLocation();
     const category = pathname.includes("movie" || "tv" ) ? "movie" : "tv";
-    const ytvideo =  useSelector((state) => state[category].info.videos );
+    const ytvideo =  useSelector((state) => state[category].info?.videos || null );
     console.log(ytvideo)
 
     if (!ytvideo || !ytvideo.key) {
-    return <div className="text-white">No trailer available</div>;
+    return <div className="text-white flex items-center justify-center font-semibold bg-[#0E1218] "> <Notfound/> 
+            </div>;
     }
     return (
         <div className='w-screen h-screen flex itmes-center justify-center bg-[rgba(0,0,0,.9)] absolute z-[100] top-0 left-0  ' >
@@ -33,6 +34,7 @@ function Trailer() {
              <iframe
                 height={600}
                 width={1700} 
+                controls
                  className='bg-red-100 relative top-[10%] '
              
               src={`https://www.youtube.com/embed/${ytvideo.key}`} />  :  <Notfound/> 

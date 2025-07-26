@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 
 function Header({data}) {
@@ -22,7 +23,7 @@ function Header({data}) {
             <i class=" text-yellow-300  ri-megaphone-fill"></i>{data.first_air_date || "no infromation"}
             <i class=" ml-5 text-yellow-300 ri-album-fill"></i>{data?.media_type?.toUpperCase()}
         </p>
-        <Link  className='text-white bg-[#6556CD] rounded text font-semibold mt-5 px-4 py-2 ' >Watch Trailer</Link>
+        <Link  to={`/${data.media_type}/details/${data.id}/trailer`} className='text-white bg-[#6556CD] rounded text font-semibold mt-5 px-4 py-2 ' >Watch Trailer</Link>
        
 
         </div>

@@ -4,8 +4,8 @@ const initialState = {
   info: null,
 }   
 
-export const personSlice = createSlice({
-  name : "container",
+export const personslice = createSlice({
+  name : "person",
   initialState, 
   reducers: {
 
@@ -20,6 +20,6 @@ export const personSlice = createSlice({
     
 });
 
-export const { loadperson, removeperson} = personSlice.actions
+export const { loadperson, removeperson} = personslice.actions
 
-export default personSlice.reducer 
+export default personslice.reducer 

@@ -5,10 +5,10 @@ import Trending from './components/TEmplate/Trending'
 import Popular from './components/TEmplate/Popular'
 import Movies from './components/TEmplate/Movies'
 import Tvshows from './components/TEmplate/Tvshows'
-import People from './components/TEmplate/People'
+import Person from './components/TEmplate/People'
 import Moviedetails from "./components/TEmplate/Moviedetails"
 import Tvdetails from './components/TEmplate/Tvdetails'
-import Peopledetails from './components/TEmplate/Persondetails'
+import Persondetails from './components/TEmplate/Persondetails'
 import Trailer from './components/TEmplate/Trailer'
 
 function App() {
@@ -43,11 +43,13 @@ function App() {
             </Route>
              
         
-        <Route path='/people' element={<People/>} />
+        <Route path='/person' element={<Person/>} />
         <Route
-               path='/people/details/:id'
-               element={<Peopledetails/>} 
+               path='/person/details/:id'
+               element={<Persondetails/>} 
             />
+
+        <Route path="/tv/detail/:id/trailer" element={<Trailer />} />    
            
         
       </Routes>

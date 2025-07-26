@@ -8,7 +8,7 @@ import Loader from './Loader';
 import InfiniteScroll from "react-infinite-scroll-component"
 
 
-function People() {
+function Person() {
 
     document.title = "DSR | PEOPLE"
     const navigate = useNavigate();
@@ -93,7 +93,7 @@ function People() {
                   hasMore={hasmore}  
                   loader={<h4>Loading...</h4>} 
             >
-                <Cards data={person} title="People"  />
+                <Cards data={person} title="Person"  />
 
             </InfiniteScroll>
 
@@ -105,4 +105,4 @@ function People() {
     )
 }
 
-export default People
+export default Person
