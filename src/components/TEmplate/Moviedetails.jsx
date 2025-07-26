@@ -6,6 +6,7 @@ import Loader from "./Loader"
 import HorizontalCards from './HorizontalCards';
 import Trailer from './Trailer';
 
+
 function Moviedetails() {
     const {pathname} = useLocation()
     const navigate = useNavigate();
@@ -17,7 +18,7 @@ function Moviedetails() {
         return ()=>{
             dispatch(removemovie());
         }
-    },[])
+    },[id])
 
     return info ? (
         <div style={{backgroundImage: `linear-gradient(rgba(0,0,0,.4 ),rgba(0,0,0,.7),rgba(0,0,0,.9)),url(https://image.tmdb.org/t/p/original/${info.detail.poster_path || info.detail.profile_path || info.detail.backdrop_path})`,
@@ -136,7 +137,7 @@ function Moviedetails() {
             {/*PART 4  RECOMMENDATIONS AND SIMILAR */}
             <hr className='border-[1px] border-white mt-5 border-zinc-400 '  />
             <h1 className='text-white text-2xl mt-10  ' > RECOMMENDATIONS AND SIMILAR MOVIES </h1>
-            <HorizontalCards data= {info.recommendations.length > 0 ?  info.similar : info.recommendations }/> 
+            <HorizontalCards data= {info.recommendations.length > 0 ?  info.recommendations :  info.similar  }/> 
              
             <Outlet/>
 

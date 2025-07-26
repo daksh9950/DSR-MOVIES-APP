@@ -36,7 +36,11 @@ function App() {
         <Route
                path='/tv/details/:id'
                element={<Tvdetails/>} 
-            />
+            >
+               <Route 
+              path='trailer'
+               element={<Trailer/>}  /> 
+            </Route>
              
         
         <Route path='/people' element={<People/>} />

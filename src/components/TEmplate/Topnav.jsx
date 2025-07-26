@@ -37,7 +37,7 @@ function Topnav() {
           
 
 
-           <div className='bg-zinc-100 absolute w-[50%] max-h-[50vh] top-[90%]  overflow-auto rounded' >
+           <div className='bg-zinc-100 absolute w-[50%] max-h-[50vh] top-[90%]  overflow-auto rounded z-[100] ' >
               {searches?.map((s,i)=>(
                 <Link to={`/${s.media_type}/details/${s.id}`} key={i} className=' hover:text-black hover:bg-zinc-200 duraton-200  font-semibold  w-[100%] p-5 flex justify-start items-center border-b-2 border-zinc-300 ' >
                  <img 
