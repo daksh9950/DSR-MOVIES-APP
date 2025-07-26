@@ -20,8 +20,8 @@ function Header({data}) {
         </h1>
         <p className='w-[70%] text-white ' >{data?.overview?.slice(0,200) }...<Link to={`/${data.media_type}/details/${data.id}`} className='text-blue-200' >more</Link></p>
         <p className='w-[70%] text-white '>
-            <i class=" text-yellow-300  ri-megaphone-fill"></i>{data.first_air_date || "no infromation"}
-            <i class=" ml-5 text-yellow-300 ri-album-fill"></i>{data?.media_type?.toUpperCase()}
+            <i className=" text-yellow-300  ri-megaphone-fill"></i>{data.first_air_date || "no infromation"}
+            <i className=" ml-5 text-yellow-300 ri-album-fill"></i>{data?.media_type?.toUpperCase()}
         </p>
         <Link  to={`/${data.media_type}/details/${data.id}/trailer`} className='text-white bg-[#6556CD] rounded text font-semibold mt-5 px-4 py-2 ' >Watch Trailer</Link>
        

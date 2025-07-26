@@ -25,7 +25,7 @@ function Topnav() {
 
     return (
        <div className='w-[50%] h-[10vh] relative flex justify-center items-center ml-[10%] ' >
-           <i class=" text-2xl text-zinc-400 ri-search-line"></i>
+           <i className=" text-2xl text-zinc-400 ri-search-line"></i>
            <input 
             onChange={(e)=>setquery(e.target.value)}
             value={query}
@@ -33,7 +33,7 @@ function Topnav() {
             type="text"
              placeholder='write movie' />
 
-            {query.length > 0 && ( <i onClick={()=>setquery('')} class="absolute text-2xl text-zinc-400 right-0  ri-close-large-line"></i>)} 
+            {query.length > 0 && ( <i onClick={()=>setquery('')} className="absolute text-2xl text-zinc-400 right-0  ri-close-large-line"></i>)} 
           
 
 

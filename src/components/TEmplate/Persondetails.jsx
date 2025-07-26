@@ -26,7 +26,7 @@ function Persondetails() {
             <nav className='w-full text-zinc-300 flex items-center gap-10 h-[10vh]  ' >
                 <Link 
                     onClick={()=>navigate(-1)}  
-                    class="mr-2 text-xl hover:text-[#6001D2] ri-arrow-left-fill" >
+                    className="mr-2 text-xl hover:text-[#6001D2] ri-arrow-left-fill" >
                 </Link>
                         
              </nav>
@@ -42,10 +42,10 @@ function Persondetails() {
                       <hr className='border-[1px] border-white mt-5 border-zinc-400 '  />
                       {/* {social media links} */}
                       <div className='text-white text-2xl  gap-x-6 flex  ' >
-                         <a target="_blank" href={`https://en.wikipedia.org/wiki/${info.externalid.wikidata_id}`}><i class="ri-earth-fill"></i></a>
-                         <a target="_blank" href={`https://www.facebook.com/${info.externalid.facebook_id}`}><i class="ri-facebook-circle-fill"></i></a>
-                         <a target="_blank" href={`https://www.instagram.com/${info.externalid.instagram_id}`}><i class="ri-instagram-fill"></i></a>
-                         <a target="_blank" href={`https://www.twitter.com/${info.externalid.twitter_id}`}><i class="ri-twitter-x-fill"></i></a>
+                         <a target="_blank" href={`https://en.wikipedia.org/wiki/${info.externalid.wikidata_id}`}><i className="ri-earth-fill"></i></a>
+                         <a target="_blank" href={`https://www.facebook.com/${info.externalid.facebook_id}`}><i className="ri-facebook-circle-fill"></i></a>
+                         <a target="_blank" href={`https://www.instagram.com/${info.externalid.instagram_id}`}><i className="ri-instagram-fill"></i></a>
+                         <a target="_blank" href={`https://www.twitter.com/${info.externalid.twitter_id}`}><i className="ri-twitter-x-fill"></i></a>
                       </div>
 
                       {/* {personal information} */}

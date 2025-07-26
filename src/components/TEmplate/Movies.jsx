@@ -65,7 +65,7 @@ function Movies() {
             <div className='w-full flex items-center justify-between px-[3%]' >
                 
                 <h1 className='text-2xl font-semibold text-zinc-400 ' >
-                    <i onClick={()=>navigate(-1)}  class="mr-2 hover:text-[#6001D2] ri-arrow-left-fill"></i> 
+                    <i onClick={()=>navigate(-1)}  className="mr-2 hover:text-[#6001D2] ri-arrow-left-fill"></i> 
                     Movies({category})
                 </h1> 
                

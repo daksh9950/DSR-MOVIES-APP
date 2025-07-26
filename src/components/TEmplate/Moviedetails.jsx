@@ -31,10 +31,10 @@ function Moviedetails() {
             <nav className='w-full text-zinc-300 flex items-center gap-10 h-[10vh]  ' >
                 <Link 
                    onClick={()=>navigate(-1)}  
-                   class="mr-2 text-xl hover:text-[#6001D2] ri-arrow-left-fill" >
+                   className="mr-2 text-xl hover:text-[#6001D2] ri-arrow-left-fill" >
                 </Link>
-                <a target="_blank" href={info.detail.homepage}><i class="ri-external-link-fill"></i></a>
-                <a target="_blank" href={`https://en.wikipedia.org/wiki/${info.externalid.wikidata_id}`}><i class="ri-earth-fill"></i></a>
+                <a target="_blank" href={info.detail.homepage}><i className="ri-external-link-fill"></i></a>
+                <a target="_blank" href={`https://en.wikipedia.org/wiki/${info.externalid.wikidata_id}`}><i className="ri-earth-fill"></i></a>
                 <a target="_blank" href={`https://www.imdb.com/title/${info.externalid.imdb_id}`}>imdb</a>
 
             </nav>
@@ -71,7 +71,7 @@ function Moviedetails() {
                   <h1 className='text-2xl font-semibold mt-3 ' >Movies Translated</h1>
                   <p className='mb-10' >{info.translations.join(", ")}</p>
 
-                  <Link className='mt-10 p-10 bg-[#6556CD] px-4 py-2 rounded  ' to={`${pathname}/trailer`}  ><i class="mr-3 ri-play-large-fill"></i>{`Watch trailer`}</Link>
+                  <Link className='mt-10 p-10 bg-[#6556CD] px-4 py-2 rounded  ' to={`${pathname}/trailer`}  ><i className="mr-3 ri-play-large-fill"></i>{`Watch trailer`}</Link>
                    
               </div>
             </div>
