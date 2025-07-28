@@ -4,10 +4,7 @@ import { Link, useNavigate } from 'react-router-dom'
 function Notfound() {
     const navigate = useNavigate()
     return (
-        // <div className='w-screen h-screeen relative top-[10%] flex justify-center items-center bg-[#0E1218]' >
-            
-        //     <img className='object-cover w-[30%] h-[40%] ' src={notfoundimg} alt="" />
-        // </div>
+       
          <div className='w-screen h-screen flex itmes-center justify-center bg-[rgba(0,0,0,.9)] absolute z-[100] top-0 left-0  ' >
              <Link 
                    onClick={()=>navigate(-1)}  

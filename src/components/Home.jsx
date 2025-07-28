@@ -59,7 +59,7 @@ function Home() {
 
               <Dropdown 
                title="Filter"
-               options={["TV", "Movies", "All"]}
+               options={["tv", "movies", "all"]}
                func={(e)=>(setcategory(e.target.value.toLowerCase()), console.log(e.target.value))}  />
 
            </div>
